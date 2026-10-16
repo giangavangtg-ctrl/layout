@@ -1,0 +1,65 @@
+/* Reset CSS mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Khung bọc ngoài cùng giới hạn chiều rộng trang */
+.container {
+    max-width: 1000px;
+    margin: 0 auto; /* Căn giữa trang */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các khối */
+}
+
+/* Định dạng Header và Footer */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+/* Định dạng khu vực chứa 2 cột ở giữa */
+.wrapper {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa Main và Sidebar */
+}
+
+/* Cột nội dung chính chiếm 70% không gian */
+.main-content {
+    flex: 7; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Cột thanh bên chiếm 30% không gian */
+.sidebar {
+    flex: 3;
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   RESPONSIVE CHO THIẾT BỊ DI ĐỘNG (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Đổi hướng của Flexbox từ nằm ngang sang cột dọc */
+    .wrapper {
+        flex-direction: column;
+    }
+}
